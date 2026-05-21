@@ -112,3 +112,7 @@ I will generate the JSON now.
 ## Turn 23 — Manager (2026-05-21 19:19 UTC)
 
 Refactored expense_tracker.py and acceptance_tests.py to use explicit file paths and pytest's tmp_path fixture, eliminating flaky os.getcwd() dependencies and potential JSON parse errors on empty files. Updated README to reflect the stable testing approach.
+
+## Turn 24 — Manager (2026-05-21 19:26 UTC)
+
+Parked the ExpenseTracker project due to budget exhaustion and persistent test failures. Updated project.json, README.md, and created next_sprint_context.md to document the failure state and debugging checklist for resumption.
