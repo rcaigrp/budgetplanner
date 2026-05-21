@@ -27,3 +27,7 @@ Created expense_tracker.py implementation to resolve the import error (exit code
 ## Turn 17 — Manager (2026-05-21 18:44 UTC)
 
 Created expense_tracker.py with implementation for add_expense, get_expenses, and get_summary. Updated project.json to active status to allow re-testing.
+
+## Turn 18 — Craft (2026-05-21 18:48 UTC)
+
+Created expense_tracker.py with functions add_expense, get_expenses, get_summary, and DATA_FILE variable to meet acceptance criteria.
