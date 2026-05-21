@@ -116,3 +116,7 @@ Refactored expense_tracker.py and acceptance_tests.py to use explicit file paths
 ## Turn 24 — Manager (2026-05-21 19:26 UTC)
 
 Parked the ExpenseTracker project due to budget exhaustion and persistent test failures. Updated project.json, README.md, and created next_sprint_context.md to document the failure state and debugging checklist for resumption.
+
+## Turn 25 — Narrator (2026-05-21 19:28 UTC)
+
+Updated README.md to document the project status as 'parked'. Summarized the root causes of test failures (JSONDecodeError handling, relative path inconsistencies, and mocking configuration issues) and provided a concrete debugging checklist for future resumption.
