@@ -108,3 +108,7 @@ I will generate the JSON now.
     "rationale": "The previous implementation failed due to complex mocking and potential side effects. The new implementation is flat and uses robust mocks."
   }
 }
+
+## Turn 23 — Manager (2026-05-21 19:19 UTC)
+
+Refactored expense_tracker.py and acceptance_tests.py to use explicit file paths and pytest's tmp_path fixture, eliminating flaky os.getcwd() dependencies and potential JSON parse errors on empty files. Updated README to reflect the stable testing approach.
