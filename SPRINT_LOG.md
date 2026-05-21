@@ -124,3 +124,7 @@ Updated README.md to document the project status as 'parked'. Summarized the roo
 ## Turn 26 — Manager (2026-05-21 19:35 UTC)
 
 Sprint budget exhausted (4/4 meetings). Tests failed due to JSONDecodeError handling, path inconsistencies, and environment isolation issues. Per strict rules, I am parking the ExpenseTracker project to preserve all code and error context for future resumption. No further investigation or budget extensions will be attempted.
+
+## Turn 27 — Manager (2026-05-21 19:36 UTC)
+
+The ExpenseTracker sprint budget has been exhausted (4/4 meetings). Per the Facilitator's instruction and the rules for 'Budget Exhausted' where tests fail and work remains, I am setting the status to 'parked'. This preserves the current state and notes for future resumption.
