@@ -128,3 +128,7 @@ Sprint budget exhausted (4/4 meetings). Tests failed due to JSONDecodeError hand
 ## Turn 27 — Manager (2026-05-21 19:36 UTC)
 
 The ExpenseTracker sprint budget has been exhausted (4/4 meetings). Per the Facilitator's instruction and the rules for 'Budget Exhausted' where tests fail and work remains, I am setting the status to 'parked'. This preserves the current state and notes for future resumption.
+
+## Turn 28 — Manager (2026-05-21 19:43 UTC)
+
+Sprint budget exhausted. Tests failed consistently with exit code 1. Parking ExpenseTracker to preserve state and notes for future resumption.
