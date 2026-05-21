@@ -136,3 +136,7 @@ Sprint budget exhausted. Tests failed consistently with exit code 1. Parking Exp
 ## Turn 29 — Manager (2026-05-21 19:50 UTC)
 
 Sprint budget exhausted. Tests have consistently failed across multiple attempts. Parking the ExpenseTracker project to preserve state for future resumption. No further investigation or budget extension will be performed.
+
+## Turn 30 — Manager (2026-05-21 19:51 UTC)
+
+Parking ExpenseTracker project due to budget exhaustion (4/4 meetings) and persistent test failures (JSON/path issues). No further meetings allowed.
