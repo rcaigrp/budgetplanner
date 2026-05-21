@@ -43,3 +43,68 @@ Fixed the test file path in docker command (added .py extension) and corrected t
 ## Turn 21 — Manager (2026-05-21 19:06 UTC)
 
 Rewrote ExpenseTracker module and acceptance tests to fix previous failures. The module now uses a class-based structure for better testability. Tests mock file I/O and use patch.object on the class methods to verify logic without real file access. Updated project.json to active status.
+
+## Turn 22 — Manager (2026-05-21 19:10 UTC)
+
+<arg_key>thought</arg_key>
+<arg_value>Let's double check the `acceptance_tests.py` logic.
+In `test_criterion_2`, I mock `os.path.exists` to return `False`.
+Then `add_expense` runs:
+`expenses = []`
+`if os.path.exists(DATA_FILE): ...` -> False
+`expenses.append(...)`
+`with open(DATA_FILE, 'w') as f: f.write(...)`
+So `mock_open()` is called once. `mock_open().write()` is called once.
+This should work.
+
+In `test_criterion_3`, I mock `os.path.exists` to return `True`.
+`get_expenses()` runs:
+`with open(DATA_FILE, 'r') as f: return json.loads(f.read())`
+`mock_open(read_data=...)` handles the read.
+This should work.
+
+In `test_criterion_4`, similar to 3.
+
+The tests look correct.
+I will generate the JSON now.
+</arg_value>
+</arg_key>
+</think>
+
+{
+  "message": "Rewriting expense_tracker.py to be flat and simple, and fixing acceptance_tests.py to use robust mocking patterns. The tests now correctly mock file existence and content to verify behavior without side effects.",
+  "insights": [
+    "Simplified expense_tracker.py to avoid nested function calls that complicate mocking.",
+    "Used mock.mock_open with specific return_data to test read/write operations reliably.",
+    "Ensured tests mock os.path.exists to control file state (exists/doesn't exist)."
+  ],
+  "file_writes": [
+    {
+      "path": "projects/ExpenseTracker/expense_tracker.py",
+      "content": "import json\nimport os\n\nDATA_FILE = '/tmp/expense_tracker_data.json'\n\ndef add_expense(category, amount):\n    expenses = []\n    if os.path.exists(DATA_FILE):\n        with open(DATA_FILE, 'r') as f:\n            expenses = json.loads(f.read())\n    \n    expenses.append({'category': category, 'amount': amount})\n    \n    with open(DATA_FILE, 'w') as f:\n        f.write(json.dumps(expenses))\n\ndef get_expenses():\n    if not os.path.exists(DATA_FILE):\n        return []\n    with open(DATA_FILE, 'r') as f:\n        return json.loads(f.read())\n\ndef get_summary():\n    expenses = get_expenses()\n    return sum(e['amount'] for e in expenses)\n"
+    },
+    {
+      "path": "projects/ExpenseTracker/acceptance_tests.py",
+      "content": "import pytest\nimport json\nimport unittest.mock as mock\nimport sys\nimport os\n\n# Add project dir to path\nsys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))\n\nimport expense_tracker\n\nMOCK_DATA_PATH = '/tmp/test_expenses.json'\n\nclass TestExpenseTracker:\n    @mock.patch('expense_tracker.DATA_FILE', MOCK_DATA_PATH)\n    @mock.patch('os.path.exists', return_value=False)\n    @mock.patch('builtins.open', mock.mock_open())\n    def test_criterion_1_module_exists(self, mock_exists, mock_open):\n        import expense_tracker\n        assert expense_tracker is not None\n\n    @mock.patch('expense_tracker.DATA_FILE', MOCK_DATA_PATH)\n    @mock.patch('os.path.exists', return_value=False)\n    @mock.patch('builtins.open', mock.mock_open())\n    def test_criterion_2_add_expense(self, mock_exists, mock_open):\n        expense_tracker.add_expense(category='food', amount=10.0)\n        # Verify open was called for writing\n        mock_open.assert_called()\n        # Verify the content written\n        mock_open().write.assert_called_with(json.dumps([{'category': 'food', 'amount': 10.0}]))\n\n    @mock.patch('expense_tracker.DATA_FILE', MOCK_DATA_PATH)\n    @mock.patch('os.path.exists', return_value=True)\n    @mock.patch('builtins.open', mock.mock_open(read_data=json.dumps([{'category': 'food', 'amount': 10.0}])))\n    def test_criterion_3_get_expenses(self, mock_exists, mock_open):\n        expenses = expense_tracker.get_expenses()\n        assert expenses == [{'category': 'food', 'amount': 10.0}]\n\n    @mock.patch('expense_tracker.DATA_FILE', MOCK_DATA_PATH)\n    @mock.patch('os.path.exists', return_value=True)\n    @mock.patch('builtins.open', mock.mock_open(read_data=json.dumps([{'category': 'food', 'amount': 10.0}])))\n    def test_criterion_4_get_summary(self, mock_exists, mock_open):\n        summary = expense_tracker.get_summary()\n        assert summary == 10.0\n"
+    }
+  ],
+  "docker_commands": [
+    {
+      "image": "python:3.11-slim",
+      "run": "pip install pytest responses && pytest /workspace/projects/ExpenseTracker/acceptance_tests.py -v",
+      "workdir": "/workspace",
+      "timeout": 120
+    }
+  ],
+  "web_requests": [],
+  "search_queries": [],
+  "notes": [
+    "Status is 'pending_verification' because previous tests failed. This attempt rewrites code and tests from scratch.",
+    "Tests use standard mocking patterns to avoid real file I/O and API calls.",
+    "Budget is exhausted (4/4). If tests pass, project will be marked complete."
+  ],
+  "vote": {
+    "action": "Run acceptance tests to verify the new implementation.",
+    "rationale": "The previous implementation failed due to complex mocking and potential side effects. The new implementation is flat and uses robust mocks."
+  }
+}
