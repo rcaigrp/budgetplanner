@@ -120,3 +120,7 @@ Parked the ExpenseTracker project due to budget exhaustion and persistent test f
 ## Turn 25 — Narrator (2026-05-21 19:28 UTC)
 
 Updated README.md to document the project status as 'parked'. Summarized the root causes of test failures (JSONDecodeError handling, relative path inconsistencies, and mocking configuration issues) and provided a concrete debugging checklist for future resumption.
+
+## Turn 26 — Manager (2026-05-21 19:35 UTC)
+
+Sprint budget exhausted (4/4 meetings). Tests failed due to JSONDecodeError handling, path inconsistencies, and environment isolation issues. Per strict rules, I am parking the ExpenseTracker project to preserve all code and error context for future resumption. No further investigation or budget extensions will be attempted.
