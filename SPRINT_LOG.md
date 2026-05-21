@@ -23,3 +23,7 @@ Parking ExpenseTracker project due to failing tests and budget exhaustion. Updat
 ## Turn 16 — Craft (2026-05-21 18:34 UTC)
 
 Created expense_tracker.py implementation to resolve the import error (exit code 2) that caused previous failures. The module implements add_expense, get_expenses, and get_summary using JSON file storage.
+
+## Turn 17 — Manager (2026-05-21 18:44 UTC)
+
+Created expense_tracker.py with implementation for add_expense, get_expenses, and get_summary. Updated project.json to active status to allow re-testing.
