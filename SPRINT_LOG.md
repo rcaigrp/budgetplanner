@@ -15,3 +15,7 @@ Parked ExpenseTracker project due to budget exhaustion and failed tests. Updated
 ## Turn 14 — Manager (2026-05-21 18:28 UTC)
 
 Sprint budget exhausted (4/4 meetings). Tests failed due to import/syntax errors and assertion mismatches, indicating significant alignment issues between `expense_tracker.py` and `acceptance_tests.py`. Per rules, I am parking the project to free sprint capacity. All code and test artifacts are preserved in storage for future debugging by the next agent.
+
+## Turn 15 — Manager (2026-05-21 18:29 UTC)
+
+Parking ExpenseTracker project due to failing tests and budget exhaustion. Updating project.json and README.md.
