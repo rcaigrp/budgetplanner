@@ -1,0 +1,12 @@
+{
+  "goal": "Create a budget planning module that tracks monthly income and expenses against a set limit.",
+  "acceptance_criteria": [
+    "budget_planner module exists and can be imported",
+    "set_budget function stores a monthly budget limit",
+    "spend function records an expenditure against the budget",
+    "check_remaining function returns remaining budget amount"
+  ],
+  "meeting_budget": 4,
+  "meetings_held": 0,
+  "status": "active"
+}
