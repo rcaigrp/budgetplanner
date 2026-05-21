@@ -35,3 +35,7 @@ Created expense_tracker.py with functions add_expense, get_expenses, get_summary
 ## Turn 19 — Manager (2026-05-21 18:55 UTC)
 
 Sprint budget exhausted. Criterion 2 errored. Per rules, I am parking the project. Next turn, I will resume it to apply the fix and run tests.
+
+## Turn 20 — Craft (2026-05-21 19:02 UTC)
+
+Fixed the test file path in docker command (added .py extension) and corrected the assertion in test_criterion_4 (changed 'total == 60' to 'assert total == 60').
