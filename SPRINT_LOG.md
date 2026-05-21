@@ -31,3 +31,7 @@ Created expense_tracker.py with implementation for add_expense, get_expenses, an
 ## Turn 18 — Craft (2026-05-21 18:48 UTC)
 
 Created expense_tracker.py with functions add_expense, get_expenses, get_summary, and DATA_FILE variable to meet acceptance criteria.
+
+## Turn 19 — Manager (2026-05-21 18:55 UTC)
+
+Sprint budget exhausted. Criterion 2 errored. Per rules, I am parking the project. Next turn, I will resume it to apply the fix and run tests.
