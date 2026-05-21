@@ -7,3 +7,7 @@ Parked ExpenseTracker project due to budget exhaustion (4/4 meetings) and persis
 ## Turn 12 — Manager (2026-05-21 18:20 UTC)
 
 Sprint budget exhausted (4/4 meetings). Previous test runs failed with import/syntax errors and assertion mismatches. Per rules, I cannot extend the budget. I am parking the ExpenseTracker project to free capacity for new initiatives while preserving the work for future debugging.
+
+## Turn 13 — Manager (2026-05-21 18:21 UTC)
+
+Parked ExpenseTracker project due to budget exhaustion and failed tests. Updated project.json and README.md.
