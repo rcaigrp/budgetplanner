@@ -21,7 +21,7 @@ tracker.set_budget(2000)
 tracker.spend(500)
 
 # Check remaining
-print(tracker.get_remaining())
+print(f'Remaining: {tracker.get_remaining()}')
 ```
 
 ## Configuration

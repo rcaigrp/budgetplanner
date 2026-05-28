@@ -1,19 +1,13 @@
 class BudgetTracker:
     def __init__(self):
-        self.limit = None
-        self.expenses = []
-
-    def set_budget(self, limit):
-        self.limit = limit
-
+        self.limit = 0.0
+        self.spent = 0.0
+    
+    def set_budget(self, amount):
+        self.limit = float(amount)
+    
     def spend(self, amount):
-        self.expenses.append(amount)
-        return amount
-
-    def get_spent(self):
-        return sum(self.expenses)
-
+        self.spent += float(amount)
+    
     def get_remaining(self):
-        if self.limit is None:
-            return "No limit set"
-        return self.limit - self.get_spent()
+        return self.limit - self.spent
