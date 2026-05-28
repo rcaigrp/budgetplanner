@@ -4,10 +4,10 @@ class BudgetTracker:
         self.spent = 0.0
 
     def set_budget(self, amount):
-        self.limit = float(amount)
+        self.limit = amount
 
     def spend(self, amount):
-        self.spent += float(amount)
+        self.spent += amount
 
     def get_remaining(self):
         return self.limit - self.spent
