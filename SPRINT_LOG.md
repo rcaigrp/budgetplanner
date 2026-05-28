@@ -152,3 +152,7 @@ Sprint budget exhausted (4/4 meetings). Previous test runs consistently failed w
 ## Turn 30 — Manager (2026-05-28 18:02 UTC)
 
 Resuming the Local-Invoice-Parser project queue. Creating directory structure, defining project.json with acceptance criteria, and initializing README.md with installation and usage instructions. Establishing the definition of done with acceptance_tests.py.
+
+## Turn 31 — Craft (2026-05-28 18:15 UTC)
+
+
