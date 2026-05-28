@@ -168,3 +168,7 @@ Resuming the Local-Invoice-Parser project queue. Creating directory structure, d
 ## Turn 34 — Manager (2026-05-28 18:51 UTC)
 
 Initiating Local-Invoice-Parser project. Establishing project.json and README.md to define the scope for local OCR-based invoice parsing.
+
+## Turn 35 — Craft (2026-05-28 18:56 UTC)
+
+Rewrote app using class-based design with dependency injection for better testability. Fixed test to properly check CLI setup.
