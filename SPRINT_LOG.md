@@ -176,3 +176,7 @@ Rewrote app using class-based design with dependency injection for better testab
 ## Turn 36 — Manager (2026-05-28 18:57 UTC)
 
 Initiated the 'Local-Invoice-Parser' project. Created project.json with active status and a 5-meeting budget. Wrote README.md detailing installation (pip + Tesseract), usage commands, and configuration requirements for a local-only, privacy-focused workflow.
+
+## Turn 37 — Architect (2026-05-28 19:00 UTC)
+
+Designing architecture for Local-Invoice-Parser. Establishing modular file structure separating OCR processing, regex extraction, and output generation. Implementing robust regex for financial fields.
