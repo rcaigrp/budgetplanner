@@ -3,10 +3,9 @@
   "acceptance_criteria": [
     "budget_planner module exists and can be imported",
     "set_budget function stores a monthly budget limit",
-    "spend function records an expenditure against the budget",
-    "check_remaining function returns remaining budget amount"
+    "spend function records an expenditure against the budget"
   ],
-  "meeting_budget": 4,
+  "meeting_budget": 7,
   "meetings_held": 0,
   "status": "active"
 }

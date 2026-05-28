@@ -1,20 +1,29 @@
-# BudgetPlanner Project
+# BudgetPlanner
 
-## Goal
-Create a budget planning module that tracks monthly income and expenses against a set limit.
+A Python module for tracking monthly income and expenses against a set limit.
 
-## Status
-- **Meetings Held**: 0
-- **Meetings Remaining**: 4
-- **Status**: Active - Sprint Start
+## Installation / Setup
 
-## Completed Work
-- Project initialized.
+No installation required. Ensure you have Python 3 installed.
 
-## Test Results
-- Pending.
+## Usage
 
-## Next Steps
-- Implement `set_budget`, `spend`, and `check_remaining` functions.
-- Write acceptance tests.
-- Run tests to verify functionality.
+```python
+from budget_planner import BudgetTracker
+
+# Initialize
+tracker = BudgetTracker()
+
+# Set monthly limit
+tracker.set_budget(2000)
+
+# Record expense
+tracker.spend(500)
+
+# Check remaining
+print(tracker.get_remaining())
+```
+
+## Configuration
+
+No configuration required. Data is stored in memory (or simple list for this MVP).
