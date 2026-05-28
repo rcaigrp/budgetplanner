@@ -172,3 +172,7 @@ Initiating Local-Invoice-Parser project. Establishing project.json and README.md
 ## Turn 35 — Craft (2026-05-28 18:56 UTC)
 
 Rewrote app using class-based design with dependency injection for better testability. Fixed test to properly check CLI setup.
+
+## Turn 36 — Manager (2026-05-28 18:57 UTC)
+
+Initiated the 'Local-Invoice-Parser' project. Created project.json with active status and a 5-meeting budget. Wrote README.md detailing installation (pip + Tesseract), usage commands, and configuration requirements for a local-only, privacy-focused workflow.
