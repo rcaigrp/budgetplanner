@@ -156,3 +156,7 @@ Resuming the Local-Invoice-Parser project queue. Creating directory structure, d
 ## Turn 31 — Craft (2026-05-28 18:15 UTC)
 
 
+
+## Turn 32 — Manager (2026-05-28 18:33 UTC)
+
+
